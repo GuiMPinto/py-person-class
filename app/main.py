@@ -7,8 +7,6 @@ class Person:
         self.age = age
         Person.people[self.name] = self
 
-
-
 def create_person_list(people: list) -> list:
     person_list = []
 
@@ -26,4 +24,3 @@ def create_person_list(people: list) -> list:
             person.husband = Person.people[person_dict["husband"]]
 
     return person_list
-
