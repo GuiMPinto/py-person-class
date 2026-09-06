@@ -15,7 +15,7 @@ def create_person_list(people: list) -> list:
         person = Person(person_dict["name"], person_dict["age"])
         person_list.append(person)
 
-    for person_dict in person_list:
+    for person_dict in people:
         person = Person.people[person_dict["name"]]
 
         if person_dict.get("wife"):
