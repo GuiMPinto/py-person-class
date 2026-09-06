@@ -10,20 +10,19 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    
     person_list = []
 
     for person_dict in people:
         person = Person(person_dict["name"], person_dict["age"])
         person_list.append(person)
-    # Preenchida a lista "person_list[<Person>, <Person>, <Person>]" 
+
     for person_dict in person_list:
         person = Person.people[person_dict["name"]]
-            
+
         if person_dict.get("wife"):
             person.wife = Person.people[person_dict["wife"]]
-                
+
         if person_dict.get("husband"):
             person.husband = Person.people[person_dict["husband"]]
 
-    
+    return person_list
